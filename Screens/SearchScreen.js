@@ -3,6 +3,8 @@ import React,{useState,useEffect,useContext} from 'react'
 import { TouchableOpacity } from 'react-native'
 import axios from 'axios'
 import { NewsContext } from '../API/Context'
+import { AntDesign } from '@expo/vector-icons';
+
 
 const SearchScreen = ({navigation}) => {
 
@@ -42,7 +44,7 @@ const SearchScreen = ({navigation}) => {
     <View style = {{...styles.Container,backgroundColor: darkTheme ? '#282c35' : 'white'}}>
         <View style = {styles.TopSearchBar}>
             <TouchableOpacity onPress={() => handleGoback()} style = {styles.BackArrow}>
-                <Image source = {require('../assets/LeftArrow.png')} style = {{height: 30,width: 30}}/>
+                <AntDesign name="arrowleft" size={32} color="#007fff" />
             </TouchableOpacity>
 
 
